@@ -1,0 +1,12 @@
+<!DOCTYPE aspectj PUBLIC "-//AspectJ//DTD//EN" "https://www.eclipse.org/aspectj/dtd/aspectj.dtd">
+<aspectj>
+    <weaver options="-Xset:weaveJavaxPackages=true">
+        <!-- only weave classes in our application-specific packages and sub-packages -->
+        <include within="com.example.aop..*"/>
+    </weaver>
+
+    <aspects>
+        <!-- weave in just this aspect -->
+        <aspect name="com.example.aop.aspect.CalculatorAdvise"/>
+    </aspects>
+</aspectj>
